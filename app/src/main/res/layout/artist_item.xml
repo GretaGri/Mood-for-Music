@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.musicalstructure.MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/artist_image"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="@dimen/item_height"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/artist_flower_s"/>
+
+    <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_very_small"
+        android:layout_alignBottom="@id/artist_image"
+        android:layout_centerHorizontal="true"
+        tools:text="Redhair"/>
+
+</RelativeLayout>

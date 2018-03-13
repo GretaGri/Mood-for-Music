@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicalstructure.MainActivity">
+
+<LinearLayout
+    android:id="@+id/navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/moods"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/navigation_height"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/moods" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="36dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center">
+    </View>
+
+    <TextView
+        android:id="@+id/artists"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/navigation_height"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/artists"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="36dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center">
+    </View>
+
+    <TextView
+        android:id="@+id/albums"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/navigation_height"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:focusable="true"
+        android:textAlignment="center"
+        android:text="@string/albums"/>
+
+</LinearLayout>
+
+    <GridView
+        android:id="@+id/moods_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="auto_fit"
+        android:clickable="true"
+        android:focusable="true"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp">
+    </GridView>
+
+</LinearLayout>

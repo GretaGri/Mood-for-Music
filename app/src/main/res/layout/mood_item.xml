@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.musicalstructure.MainActivity">
+
+    <ImageView
+        android:id="@+id/mood_item_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/love_s"/>
+
+    <TextView
+        android:id="@+id/mood_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/textBackground"
+        android:textSize="@dimen/text_size_small"
+        android:layout_centerInParent="true"
+        tools:text="Love"/>
+
+</RelativeLayout>
