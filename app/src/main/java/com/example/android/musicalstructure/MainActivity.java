@@ -10,12 +10,17 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.logo);
 
         //Underline TextView Moods to show chosen category in navigation.
         //Source: https://stackoverflow.com/questions/2394935/can-i-underline-text-in-an-android-layout
@@ -55,5 +60,35 @@ public class MainActivity extends AppCompatActivity {
                 return true;
              }
         });
+
+        //Create a ArrayList with moods/genres and corresponding image.
+        ArrayList<Cover> covers = new ArrayList<>();
+        covers.add(new Cover("Pop",R.drawable.pop_s));
+        covers.add(new Cover("Party",R.drawable.party_s));
+        covers.add(new Cover("Dance",R.drawable.dance_s));
+        covers.add(new Cover("Hip-Hop",R.drawable.hip_hop_s));
+        covers.add(new Cover("Workout",R.drawable.workout_s));
+        covers.add(new Cover("Movie",R.drawable.girl_s));
+        covers.add(new Cover("Jazz",R.drawable.jazz_s));
+        covers.add(new Cover("Sunny",R.drawable.summer_s));
+        covers.add(new Cover("Love",R.drawable.love_s));
+        covers.add(new Cover("Indie",R.drawable.indie_s));
+        covers.add(new Cover("Coding",R.drawable.code_s));
+        covers.add(new Cover("Raining",R.drawable.rain_s));
+        covers.add(new Cover("Country",R.drawable.country_s));
+        covers.add(new Cover("Classic",R.drawable.classic_s));
+        covers.add(new Cover("Rock",R.drawable.rock_s));
+        covers.add(new Cover("Kids",R.drawable.kids_s));
+
+
+
+        //Create a MoodAdapter adapter.
+        MoodAdapter adapter = new MoodAdapter(this, covers);
+
+        //Set adapter to GridView.
+        moodsGrid.setAdapter(adapter);
     }
+
 }
+
+

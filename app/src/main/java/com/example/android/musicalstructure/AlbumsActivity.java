@@ -16,6 +16,9 @@ public class AlbumsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.logo);
+
         //Underline TextView Moods to show chosen category in navigation.
         //Source: https://stackoverflow.com/questions/2394935/can-i-underline-text-in-an-android-layout
         TextView textView = findViewById(R.id.albums);
