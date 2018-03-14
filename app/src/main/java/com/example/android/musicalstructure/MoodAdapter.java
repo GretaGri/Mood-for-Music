@@ -37,13 +37,13 @@ public class MoodAdapter extends ArrayAdapter<Cover> {
                 gridItemView = LayoutInflater.from(getContext()).inflate(
                         R.layout.mood_item, parent, false);
             }
-// Get the {@link Cover} object located at this position in the list
+            // Get the {@link Cover} object located at this position in the list
             Cover currentCover = getItem(position);
 
             // Find the TextView in the mood_item.xml layout with the ID mood_item_text
             TextView moodName = gridItemView.findViewById(R.id.mood_item_text);
-            // Get the miwok translation from the current Word object and
-            // set this text on the name TextView
+            // Get the mood text from the current Cover object and
+            // set this text on the mood_item_text TextView
             moodName.setText(currentCover.getCoverName());
 
             // Find the ImageView in the mood_item.xml layout with the ID mood_item_image

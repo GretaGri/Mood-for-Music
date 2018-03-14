@@ -3,11 +3,15 @@ package com.example.android.musicalstructure;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class ArtistActivity extends AppCompatActivity {
 
@@ -16,6 +20,9 @@ public class ArtistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.logo);
 
@@ -47,8 +54,8 @@ public class ArtistActivity extends AppCompatActivity {
         });
 
         // Set grid view when swiped left to go to Albums activity, right - to Main activity (moods page).
-        GridView moodsGrid = findViewById(R.id.moods_grid);
-        moodsGrid.setOnTouchListener(new OnSwipeTouchListener() {
+        GridView artistGrid = findViewById(R.id.moods_grid);
+        artistGrid.setOnTouchListener(new OnSwipeTouchListener() {
             @Override
             public boolean onSwipeRight() {
                 Intent i = new Intent(ArtistActivity.this, MainActivity.class);
@@ -60,6 +67,33 @@ public class ArtistActivity extends AppCompatActivity {
                 Intent i = new Intent(ArtistActivity.this, AlbumsActivity.class);
                 startActivity(i);
                 return true;
+            }
+        });
+        //Create a ArrayList with artists and corresponding image (dummy names and images).
+        ArrayList<Cover> covers = new ArrayList<>();
+        covers.add(new Cover("Ricky Bob",R.drawable.artist_man2_s));
+        covers.add(new Cover("Alice",R.drawable.album_chlidren_s));
+        covers.add(new Cover("Disco man",R.drawable.artist_man_s));
+        covers.add(new Cover("Silent Jim",R.drawable.artist_man3_s));
+        covers.add(new Cover("Mona Lisa",R.drawable.artist_girl_s));
+        covers.add(new Cover("Pretty",R.drawable.artist_girl4_s));
+        covers.add(new Cover("Lora",R.drawable.artist_girls3_s));
+        covers.add(new Cover("Mini-me",R.drawable.artist_indie_s));
+        covers.add(new Cover("Flower",R.drawable.artist_flower_s));
+        covers.add(new Cover("Country boy",R.drawable.artist_with_guitar_s));
+        covers.add(new Cover("Big G",R.drawable.artist_hiphop_s));
+
+        //Create a ArtistAdapter adapter.
+        ArtistAdapter adapter = new ArtistAdapter(this, covers);
+
+        //Set adapter to GridView.
+        artistGrid.setAdapter(adapter);
+
+        artistGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(ArtistActivity.this,SongListActivity.class);
+                startActivity(i);
             }
         });
     }

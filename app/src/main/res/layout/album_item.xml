@@ -7,33 +7,33 @@
     tools:context="com.example.android.musicalstructure.MainActivity">
 
     <ImageView
-        android:id="@+id/album_image"
+        android:id="@+id/album_item_image"
         android:layout_width="@dimen/item_width"
         android:layout_height="@dimen/item_height"
         android:scaleType="centerCrop"
         tools:src="@drawable/album_baloons_s"/>
 
     <TextView
-        android:id="@+id/album_name"
+        android:id="@+id/album_item_name"
         android:layout_width="@dimen/item_width"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:background="@color/textBackground"
         android:textSize="@dimen/text_size_small"
-        android:layout_above="@id/artist_name"
+        android:layout_above="@id/album_item_artist"
         android:gravity="center_horizontal"
         tools:text="Baloons"/>
 
     <TextView
-        android:id="@+id/artist_name"
+        android:id="@+id/album_item_artist"
         android:layout_width="@dimen/item_width"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:background="@color/textBackground"
         android:textSize="@dimen/text_size_very_small"
-        android:layout_alignBottom="@id/album_image"
+        android:layout_alignBottom="@id/album_item_image"
         android:gravity="center_horizontal"
         tools:text="Ricky Tricky"/>
 

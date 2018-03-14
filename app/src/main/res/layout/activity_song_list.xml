@@ -1,67 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context="com.example.android.musicalstructure.SongListActivity">
+    android:orientation="vertical"
+    tools:context="com.example.android.musicalstructure.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/album_image"
-            android:layout_width="@dimen/song_item_width"
-            android:layout_height="@dimen/song_item_height"
-            android:scaleType="centerCrop"
-            tools:src="@drawable/album_baloons_s"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
 
         <TextView
-            android:id="@+id/album_name"
-            android:layout_width="80dp"
+            android:id="@+id/custom_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:background="@color/textBackground"
-            android:textSize="@dimen/text_size_very_small"
-            android:layout_above="@id/artist_name"
-            android:gravity="center_horizontal"
-            tools:text="Baloons"/>
+            android:fontFamily="@font/tillana_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/textColor" />
 
-        <TextView
-            android:id="@+id/artist_name"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:background="@color/textBackground"
-            android:textSize="8dp"
-            android:layout_alignBottom="@id/album_image"
-            android:gravity="center_horizontal"
-            tools:text="Ricky Tricky"/>
+    </android.support.v7.widget.Toolbar>
 
-    </RelativeLayout>
-
-        <TextView
-            android:id="@+id/song_name"
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="80dp"
-            android:background="@color/colorAccent"
-            android:gravity="center_vertical"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            tools:text="Song name"/>
-
-    <ImageButton
-        android:id="@+id/play_button"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_weight="1"
-        android:src="@drawable/ic_play_arrow_white_24dp"
-        android:background="@color/colorAccent"/>
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/song_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
 
 </LinearLayout>

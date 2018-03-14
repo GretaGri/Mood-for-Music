@@ -1,8 +1,10 @@
 package com.example.android.musicalstructure;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.View;
@@ -19,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.logo);
 
@@ -61,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
              }
         });
 
-        //Create a ArrayList with moods/genres and corresponding image.
+                //Create a ArrayList with moods/genres and corresponding image.
         ArrayList<Cover> covers = new ArrayList<>();
         covers.add(new Cover("Pop",R.drawable.pop_s));
         covers.add(new Cover("Party",R.drawable.party_s));
@@ -87,8 +92,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Set adapter to GridView.
         moodsGrid.setAdapter(adapter);
-    }
 
+        moodsGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(MainActivity.this,SongListActivity.class);
+                startActivity(i);
+            }
+        });
+    }
 }
 
 
