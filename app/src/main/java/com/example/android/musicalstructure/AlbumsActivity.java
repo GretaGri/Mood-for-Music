@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class AlbumsActivity extends AppCompatActivity {
 
+    String album;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,8 @@ public class AlbumsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.logo);
+        TextView title = findViewById(R.id.custom_title);
+        title.setText(R.string.albums);
 
         //Underline TextView Moods to show chosen category in navigation.
         //Source: https://stackoverflow.com/questions/2394935/can-i-underline-text-in-an-android-layout
@@ -79,7 +83,7 @@ public class AlbumsActivity extends AppCompatActivity {
 
 
         //Create a MoodAdapter adapter.
-        AlbumAdapter adapter = new AlbumAdapter(this, covers);
+        final AlbumAdapter adapter = new AlbumAdapter(this, covers);
 
         //Set adapter to GridView.
         albumGrid.setAdapter(adapter);
@@ -87,7 +91,9 @@ public class AlbumsActivity extends AppCompatActivity {
         albumGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                album = adapter.getItem(position).getCoverName();
                 Intent i = new Intent(AlbumsActivity.this,SongListActivity.class);
+                i.putExtra("album", album);
                 startActivity(i);
             }
         });

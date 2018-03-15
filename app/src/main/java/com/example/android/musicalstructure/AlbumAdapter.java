@@ -56,7 +56,7 @@ public class AlbumAdapter extends ArrayAdapter<Cover> {
         // Get the image resource ID from the current Cover object and set the image to album_item_image
         image.setImageResource(currentCover.getImageResourceId());
 
-        // Return the whole list item layout (containing 1 TextView and an ImageView)
+        // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the GridView
         return gridItemView;
     }

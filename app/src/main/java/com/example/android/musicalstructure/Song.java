@@ -20,6 +20,12 @@ public class Song {
     //Integer value for resource id of the song file.
     private int mSongResourceId;
 
+    //String value for mood category;
+    private String mMood;
+
+    //String value for genre category;
+    private String mGenre;
+
     /**
      * Constructs a new Song object with initial values for album name, artist name, song name, song file and image resource.
      *
@@ -29,12 +35,14 @@ public class Song {
      * @param songName is the song name.
      * @param songResourceId is the resource id of the song file.
      */
-    public Song(String albumName, String artistName, int imageResourceId, String songName, int songResourceId) {
+    public Song(String albumName, String artistName, int imageResourceId, String songName, int songResourceId, String genre, String mood) {
         mAlbumName = albumName;
         mArtistName = artistName;
         mImageResourceId = imageResourceId;
         mSongName = songName;
         mSongResourceId = songResourceId;
+        mGenre = genre;
+        mMood = mood;
     }
 
 
@@ -56,6 +64,7 @@ public class Song {
         return mArtistName;
     }
 
+
     /**
      * Gets the image resource id in the Song.
      *
@@ -64,10 +73,11 @@ public class Song {
     public int getImageResourceId() {
         return mImageResourceId;
     }
+
     /**
      * Gets the song name string value in the Song.
      *
-     * @return current artist name in the Song.
+     * @return current song name in the Song.
      */
     public String getSongName() {
         return mSongName;
@@ -80,5 +90,23 @@ public class Song {
      */
     public int getSongResourceId() {
         return mSongResourceId;
+    }
+
+    /**
+     * Gets the mood string value in the Song.
+     *
+     * @return current mood in the Song.
+     */
+    public String getMood() {
+        return mMood;
+    }
+
+    /**
+     * Gets the genre string value in the Song.
+     *
+     * @return current genre in the Song.
+     */
+    public String getGenre() {
+        return mGenre;
     }
 }

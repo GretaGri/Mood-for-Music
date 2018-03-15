@@ -16,6 +16,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    String mood;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 
       // Set grid view when swiped left to go to Artists activity
-        GridView moodsGrid = findViewById(R.id.moods_grid);
+        final GridView moodsGrid = findViewById(R.id.moods_grid);
         moodsGrid.setOnTouchListener(new OnSwipeTouchListener() {
             @Override
             public boolean onSwipeLeft() {
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Create a MoodAdapter adapter.
-        MoodAdapter adapter = new MoodAdapter(this, covers);
+        final MoodAdapter adapter = new MoodAdapter(this, covers);
 
         //Set adapter to GridView.
         moodsGrid.setAdapter(adapter);
@@ -96,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
         moodsGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mood = adapter.getItem(position).getCoverName();
                 Intent i = new Intent(MainActivity.this,SongListActivity.class);
+                i.putExtra("mood",mood);
                 startActivity(i);
             }
         });

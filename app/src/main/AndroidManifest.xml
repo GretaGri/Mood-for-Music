@@ -23,12 +23,13 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".ArtistActivity"
-            android:label="@string/artists" />
+            android:name=".ArtistActivity"/>
+
         <activity
-            android:name=".AlbumsActivity"
-            android:label="@string/albums"></activity>
-        <activity android:name=".SongListActivity"></activity>
+            android:name=".AlbumsActivity"/>
+
+        <activity
+            android:name=".SongListActivity"/>
     </application>
 
 </manifest>
