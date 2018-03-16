@@ -18,14 +18,14 @@ public class Cover {
     /**
      * Constructs a new Cover object with initial values for cover name, additional info and image resource.
      *
-     * @param coverName is album name.
-     * @param artistName is the additional info about the artist.
+     * @param coverName       is album name.
+     * @param artistName      is the additional info about the artist.
      * @param imageResourceId is the resource id of the image corresponding album.
      */
     public Cover(String coverName, String artistName, int imageResourceId) {
-      mCoverName = coverName;
-       mArtistName = artistName;
-       mImageResourceId = imageResourceId;
+        mCoverName = coverName;
+        mArtistName = artistName;
+        mImageResourceId = imageResourceId;
     }
 
     /**

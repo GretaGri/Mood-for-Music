@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-      // Set grid view when swiped left to go to Artists activity
+        // Set grid view when swiped left to go to Artists activity
         final GridView moodsGrid = findViewById(R.id.moods_grid);
         moodsGrid.setOnTouchListener(new OnSwipeTouchListener() {
             @Override
@@ -65,28 +65,27 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, ArtistActivity.class);
                 startActivity(i);
                 return true;
-             }
+            }
         });
 
-                //Create a ArrayList with moods/genres and corresponding image.
+        //Create a ArrayList with moods/genres and corresponding image.
         ArrayList<Cover> covers = new ArrayList<>();
-        covers.add(new Cover("Pop",R.drawable.pop_s));
-        covers.add(new Cover("Party",R.drawable.party_s));
-        covers.add(new Cover("Dance",R.drawable.dance_s));
-        covers.add(new Cover("Hip-Hop",R.drawable.hip_hop_s));
-        covers.add(new Cover("Workout",R.drawable.workout_s));
-        covers.add(new Cover("Movie",R.drawable.girl_s));
-        covers.add(new Cover("Jazz",R.drawable.jazz_s));
-        covers.add(new Cover("Sunny",R.drawable.summer_s));
-        covers.add(new Cover("Love",R.drawable.love_s));
-        covers.add(new Cover("Indie",R.drawable.indie_s));
-        covers.add(new Cover("Coding",R.drawable.code_s));
-        covers.add(new Cover("Raining",R.drawable.rain_s));
-        covers.add(new Cover("Country",R.drawable.country_s));
-        covers.add(new Cover("Classic",R.drawable.classic_s));
-        covers.add(new Cover("Rock",R.drawable.rock_s));
-        covers.add(new Cover("Kids",R.drawable.kids_s));
-
+        covers.add(new Cover("Pop", R.drawable.pop_s));
+        covers.add(new Cover("Party", R.drawable.party_s));
+        covers.add(new Cover("Dance", R.drawable.dance_s));
+        covers.add(new Cover("Hip-Hop", R.drawable.hip_hop_s));
+        covers.add(new Cover("Workout", R.drawable.workout_s));
+        covers.add(new Cover("Movie", R.drawable.girl_s));
+        covers.add(new Cover("Jazz", R.drawable.jazz_s));
+        covers.add(new Cover("Sunny", R.drawable.summer_s));
+        covers.add(new Cover("Love", R.drawable.love_s));
+        covers.add(new Cover("Indie", R.drawable.indie_s));
+        covers.add(new Cover("Coding", R.drawable.code_s));
+        covers.add(new Cover("Raining", R.drawable.rain_s));
+        covers.add(new Cover("Country", R.drawable.country_s));
+        covers.add(new Cover("Classic", R.drawable.classic_s));
+        covers.add(new Cover("Rock", R.drawable.rock_s));
+        covers.add(new Cover("Kids", R.drawable.kids_s));
 
 
         //Create a MoodAdapter adapter.
@@ -99,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 mood = adapter.getItem(position).getCoverName();
-                Intent i = new Intent(MainActivity.this,SongListActivity.class);
-                i.putExtra("mood",mood);
+                Intent i = new Intent(MainActivity.this, SongListActivity.class);
+                i.putExtra("mood", mood);
                 startActivity(i);
             }
         });

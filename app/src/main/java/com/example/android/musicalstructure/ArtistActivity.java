@@ -66,6 +66,7 @@ public class ArtistActivity extends AppCompatActivity {
                 startActivity(i);
                 return true;
             }
+
             @Override
             public boolean onSwipeLeft() {
                 Intent i = new Intent(ArtistActivity.this, AlbumsActivity.class);
@@ -75,17 +76,17 @@ public class ArtistActivity extends AppCompatActivity {
         });
         //Create a ArrayList with artists and corresponding image (dummy names and images).
         ArrayList<Cover> covers = new ArrayList<>();
-        covers.add(new Cover("Ricky Bob",R.drawable.artist_man2_s));
-        covers.add(new Cover("Alice",R.drawable.album_chlidren_s));
-        covers.add(new Cover("Disco man",R.drawable.artist_man_s));
-        covers.add(new Cover("Silent Jim",R.drawable.artist_man3_s));
-        covers.add(new Cover("Mona Lisa",R.drawable.artist_girl_s));
-        covers.add(new Cover("Pretty",R.drawable.artist_girl4_s));
-        covers.add(new Cover("Lora",R.drawable.artist_girls3_s));
-        covers.add(new Cover("Mini-me",R.drawable.artist_indie_s));
-        covers.add(new Cover("Flower",R.drawable.artist_flower_s));
-        covers.add(new Cover("Country boy",R.drawable.artist_with_guitar_s));
-        covers.add(new Cover("Big G",R.drawable.artist_hiphop_s));
+        covers.add(new Cover("Ricky Bob", R.drawable.artist_man2_s));
+        covers.add(new Cover("Alice", R.drawable.album_chlidren_s));
+        covers.add(new Cover("Disco man", R.drawable.artist_man_s));
+        covers.add(new Cover("Silent Jim", R.drawable.artist_man3_s));
+        covers.add(new Cover("Mona Lisa", R.drawable.artist_girl_s));
+        covers.add(new Cover("Pretty", R.drawable.artist_girl4_s));
+        covers.add(new Cover("Lora", R.drawable.artist_girls3_s));
+        covers.add(new Cover("Mini-me", R.drawable.artist_indie_s));
+        covers.add(new Cover("Flower", R.drawable.artist_flower_s));
+        covers.add(new Cover("Country boy", R.drawable.artist_with_guitar_s));
+        covers.add(new Cover("Big G", R.drawable.artist_hiphop_s));
 
         //Create a ArtistAdapter adapter.
         final ArtistAdapter adapter = new ArtistAdapter(this, covers);
@@ -97,7 +98,7 @@ public class ArtistActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 artist = adapter.getItem(position).getCoverName();
-                Intent i = new Intent(ArtistActivity.this,SongListActivity.class);
+                Intent i = new Intent(ArtistActivity.this, SongListActivity.class);
                 i.putExtra("artist", artist);
                 startActivity(i);
             }

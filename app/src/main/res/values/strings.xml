@@ -4,4 +4,15 @@
     <string name="artists">Artists</string>
     <string name="albums">Albums</string>
     <string name="songs">Songs</string>
+    <string name="player">Player</string>
+    <string name="zero">0:00</string>
+    <string name="shuffle_button">Shuffle button</string>
+    <string name="play_previous_button">Play previous button</string>
+    <string name="play_button">Play button</string>
+    <string name="play_next_button">Play next button</string>
+    <string name="replay_button">Replay button</string>
+    <string name="volume_on_off_button">Volume on/off button</string>
+    <string name="album_cover_picture">Album cover picture</string>
+    <string name="artist_picture">Artist picture</string>
+    <string name="category_picture">Category picture</string>
 </resources>

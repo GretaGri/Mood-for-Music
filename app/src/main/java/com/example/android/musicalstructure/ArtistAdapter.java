@@ -18,7 +18,8 @@ import java.util.List;
 
 public class ArtistAdapter extends ArrayAdapter<Cover> {
 
-    /**Create a new {@link MoodAdapter} object.
+    /**
+     * Create a new {@link MoodAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param objects is the list of {@link Cover}s to be displayed.
@@ -26,13 +27,14 @@ public class ArtistAdapter extends ArrayAdapter<Cover> {
     public ArtistAdapter(@NonNull Context context, @NonNull List<Cover> objects) {
         super(context, 0, objects);
     }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         // Check if the existing view is being reused, otherwise inflate the view
         View gridItemView = convertView;
-        if(gridItemView == null) {
+        if (gridItemView == null) {
             gridItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.artist_item, parent, false);
         }

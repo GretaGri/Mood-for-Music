@@ -30,6 +30,9 @@
 
         <activity
             android:name=".SongListActivity"/>
+
+        <activity
+            android:name=".PlayerActivity"/>
     </application>
 
 </manifest>

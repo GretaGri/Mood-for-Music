@@ -69,17 +69,17 @@ public class AlbumsActivity extends AppCompatActivity {
 
         //Create a ArrayList with albums and corresponding image (dummy names and images).
         ArrayList<Cover> covers = new ArrayList<>();
-        covers.add(new Cover("Balloons","Ricky Bob",R.drawable.album_baloons_s));
-        covers.add(new Cover("Children songs","Alice",R.drawable.album_chlidren_s));
-        covers.add(new Cover("Disco","Disco man",R.drawable.album_disco_s));
-        covers.add(new Cover("Lake","Silent Jim",R.drawable.album_lake_s));
-        covers.add(new Cover("Smile","Mona Lisa",R.drawable.album_lights_s));
-        covers.add(new Cover("Love","Pretty",R.drawable.album_love_s));
-        covers.add(new Cover("Mountains","Lora",R.drawable.album_mountains_s));
-        covers.add(new Cover("Sky","Mini-me",R.drawable.album_sky_s));
-        covers.add(new Cover("Miss you","Flower",R.drawable.artist_flower_s));
-        covers.add(new Cover("Home","Country boy",R.drawable.artist_with_guitar_s));
-        covers.add(new Cover("Pressure","Big G",R.drawable.artist_hiphop_s));
+        covers.add(new Cover("Balloons", "Ricky Bob", R.drawable.album_balloons_s));
+        covers.add(new Cover("Children songs", "Alice", R.drawable.album_chlidren_s));
+        covers.add(new Cover("Disco", "Disco man", R.drawable.album_disco_s));
+        covers.add(new Cover("Lake", "Silent Jim", R.drawable.album_lake_s));
+        covers.add(new Cover("Smile", "Mona Lisa", R.drawable.album_lights_s));
+        covers.add(new Cover("Love", "Pretty", R.drawable.album_love_s));
+        covers.add(new Cover("Mountains", "Lora", R.drawable.album_mountains_s));
+        covers.add(new Cover("Sky", "Mini-me", R.drawable.album_sky_s));
+        covers.add(new Cover("Miss you", "Flower", R.drawable.artist_flower_s));
+        covers.add(new Cover("Home", "Country boy", R.drawable.artist_with_guitar_s));
+        covers.add(new Cover("Pressure", "Big G", R.drawable.artist_hiphop_s));
 
 
         //Create a MoodAdapter adapter.
@@ -92,10 +92,10 @@ public class AlbumsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 album = adapter.getItem(position).getCoverName();
-                Intent i = new Intent(AlbumsActivity.this,SongListActivity.class);
+                Intent i = new Intent(AlbumsActivity.this, SongListActivity.class);
                 i.putExtra("album", album);
                 startActivity(i);
             }
         });
     }
-    }
+}

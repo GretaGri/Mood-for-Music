@@ -26,16 +26,22 @@ public class Song {
     //String value for genre category;
     private String mGenre;
 
+    //Integer value for resource id of the album color.
+    private int mAlbumColor;
+
     /**
      * Constructs a new Song object with initial values for album name, artist name, song name, song file and image resource.
      *
-     * @param albumName is album name.
-     * @param artistName is the additional info about the artist.
+     * @param albumName       is album name.
+     * @param artistName      is the additional info about the artist.
      * @param imageResourceId is the resource id of the image corresponding album.
-     * @param songName is the song name.
-     * @param songResourceId is the resource id of the song file.
+     * @param songName        is the song name.
+     * @param songResourceId  is the resource id of the song file.
+     * @param genre           is the genre of this song.
+     * @param mood            is the mood of this song.
+     * @param albumColor      is the resource id of album color.
      */
-    public Song(String albumName, String artistName, int imageResourceId, String songName, int songResourceId, String genre, String mood) {
+    public Song(String albumName, String artistName, int imageResourceId, String songName, int songResourceId, String genre, String mood, int albumColor) {
         mAlbumName = albumName;
         mArtistName = artistName;
         mImageResourceId = imageResourceId;
@@ -43,6 +49,7 @@ public class Song {
         mSongResourceId = songResourceId;
         mGenre = genre;
         mMood = mood;
+        mAlbumColor = albumColor;
     }
 
 
@@ -63,7 +70,6 @@ public class Song {
     public String getArtistName() {
         return mArtistName;
     }
-
 
     /**
      * Gets the image resource id in the Song.
@@ -108,5 +114,14 @@ public class Song {
      */
     public String getGenre() {
         return mGenre;
+    }
+
+    /**
+     * Gets the album color resource id in the Song.
+     *
+     * @return current song album color resource id in the Song.
+     */
+    public int getAlbumColorResourceId() {
+        return mAlbumColor;
     }
 }

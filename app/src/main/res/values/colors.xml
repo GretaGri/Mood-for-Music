@@ -2,8 +2,20 @@
 <resources>
     <color name="colorPrimary">#d81b60</color>
     <color name="colorPrimaryDark">#a00037</color>
-    <color name="colorAccent">#ff5c8d</color>
+    <color name="colorAccent">#ff90b2</color>
     <color name="textColor">#FFFFFF</color>
     <color name="background">#1b0000</color>
     <color name="textBackground">#7F383011</color>
+    <color name="album_balloons_color">#831B50</color>
+    <color name="album_children_color">#BE6C23</color>
+    <color name="album_disco_color">#11126C</color>
+    <color name="album_lake_color">#939AA4</color>
+    <color name="album_smile_color">#382D11</color>
+    <color name="album_love_color">#D19573</color>
+    <color name="album_mountains_color">#53567F</color>
+    <color name="album_sky_color">#013372</color>
+    <color name="album_missyou_color">#236A2E</color>
+    <color name="album_pressure_color">#303F56</color>
+    <color name="album_home_color">#BBB0AE</color>
+    <color name="album_rockstar_color">#E60043</color>
 </resources>
