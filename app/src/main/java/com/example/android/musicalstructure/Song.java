@@ -4,7 +4,7 @@ package com.example.android.musicalstructure;
  * Created by Greta Grigutė on 2018-03-14.
  */
 
-public class Song {
+class Song {
     //String value Album name
     private String mAlbumName;
 

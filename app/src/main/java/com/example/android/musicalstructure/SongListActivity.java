@@ -28,6 +28,7 @@ public class SongListActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.logo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView title = findViewById(R.id.custom_title);
         title.setText(R.string.songs);
 
@@ -171,5 +172,11 @@ public class SongListActivity extends AppCompatActivity {
         //Set adapter to GridView.
         songList.setAdapter(adapter);
 
+    }
+    @Override
+    //Solution from https://stackoverflow.com/questions/15686555/display-back-button-on-action-bar
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }

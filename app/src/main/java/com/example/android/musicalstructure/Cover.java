@@ -5,7 +5,7 @@ package com.example.android.musicalstructure;
  * Created by Greta Grigutė on 2018-03-13.
  */
 
-public class Cover {
+class Cover {
     //String value Cover name (for moods/genres, artist name, album name)
     private String mCoverName;
 
